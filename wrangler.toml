@@ -1,5 +1,0 @@
-name = "instagram-frontend"
-compatibility_date = "2025-06-26"
-
-[site]
-bucket = "./dist"
