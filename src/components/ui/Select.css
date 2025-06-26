@@ -1,0 +1,19 @@
+.custom-select {
+  width: 100%;
+  padding: 8px; /* fallback, overridden inline if needed */
+  border: 1px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: #007bff; /* fallback, should match theme.colors.primary */
+  box-shadow: 0 0 0 2px #cce5ff; /* fallback, should match theme.colors.primaryLight */
+}
+
+.custom-select:disabled {
+  background: #f5f5f5;
+}

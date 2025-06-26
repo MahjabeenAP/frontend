@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { CreatePostData } from '../types/post';
+import type { CreatePostData } from '../types/post';
 
 export const usePostForm = (initialState: CreatePostData) => {
   const [formData, setFormData] = useState<CreatePostData>(initialState);

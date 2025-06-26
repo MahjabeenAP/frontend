@@ -1,5 +1,6 @@
 import React from 'react';
 import { theme } from '../../styles/global';
+import './Select.css';
 
 interface SelectOption {
   value: string;
@@ -31,16 +32,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
       fontSize: theme.fontSizes.base,
       backgroundColor: theme.colors.white,
       transition: 'border-color 0.2s ease-in-out',
-      '&:focus': {
-        outline: 'none',
-        borderColor: theme.colors.primary,
-        boxShadow: `0 0 0 2px ${theme.colors.primaryLight}`,
-      },
-      '&:disabled': {
-        backgroundColor: theme.colors.lightGray,
-        cursor: 'not-allowed',
-      },
-      ...style,
+      // focus and disabled styles are moved to CSS
     };
 
     return (
@@ -60,7 +52,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
         <select
           ref={ref}
           style={selectStyles}
-          className={className}
+          className={`custom-select${className ? ' ' + className : ''}`}
           {...props}
         >
           {options.map((option) => (
